@@ -1,4 +1,4 @@
-# Remote Shutdown
+# Remote Power
 
 Minimal, dependency-free Node.js web app to shut down or sleep your Windows PC from your phone over the LAN.
 
