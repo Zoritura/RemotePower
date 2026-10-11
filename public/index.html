@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>PC Control</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>PC Control</h1>
+    <div class="pill" id="pill"><span class="dot" id="dot"></span><span id="pillText">Connecting…</span></div>
+  </header>
+
+  <section id="v-login" hidden>
+    <form id="loginForm">
+      <label for="pw">Password</label>
+      <input id="pw" type="password" autocomplete="current-password" maxlength="256" required>
+      <button class="btn primary" type="submit">Log in</button>
+    </form>
+  </section>
+
+  <section id="v-main" hidden>
+    <button class="btn danger" id="btnShutdown">Shut down</button>
+    <button class="btn" id="btnSleep">Sleep</button>
+    <button class="btn" id="btnCancelSched">Cancel scheduled shutdown</button>
+    <p class="muted" id="lastAction"></p>
+    <button class="btn ghost" id="btnLogout">Log out</button>
+  </section>
+
+  <section id="v-confirm" hidden>
+    <h2 id="confirmTitle"></h2>
+    <div class="slide">
+      <span class="slide-label">Slide to confirm &#8594;</span>
+      <input type="range" id="slider" min="0" max="100" value="0" aria-label="Slide to confirm">
+    </div>
+    <button class="btn ghost" id="btnBack">Back</button>
+  </section>
+
+  <section id="v-count" hidden>
+    <p id="countText" class="center"></p>
+    <div class="big" id="countNum">30</div>
+    <button class="btn danger huge" id="btnCancelBig">Cancel</button>
+  </section>
+
+  <section id="v-done" hidden>
+    <h2 id="doneText"></h2>
+    <button class="btn" id="btnDone">OK</button>
+  </section>
+
+  <p id="msg" role="status" class="center"></p>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>

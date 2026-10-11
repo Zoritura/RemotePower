@@ -1,0 +1,11 @@
+{
+  "host": "0.0.0.0",
+  "port": 3000,
+  "passwordHash": "",
+  "allowedHosts": [],
+  "https": { "enabled": false, "keyFile": "certs/key.pem", "certFile": "certs/cert.pem" },
+  "logFile": "logs/audit.log",
+  "sessionIdleMinutes": 10,
+  "maxFailures": 5,
+  "lockoutMinutes": 15
+}
